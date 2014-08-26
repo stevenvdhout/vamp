@@ -1,0 +1,14 @@
+
+echo "--- Install drush ---"
+git clone https://github.com/drush-ops/drush.git /home/vagrant/drush
+chmod u+x /home/vagrant/drush/drush
+sudo ln -s /home/vagrant/drush/drush /usr/bin/drush
+cd /home/vagrant/drush
+composer install
+cd ~
+
+echo "--- add aliasses ---"
+echo "# Add the vagrant .profile file" >> /home/vagrant/.profile
+echo "source /vagrant/.profile" >> /home/vagrant/.profile
+
+
