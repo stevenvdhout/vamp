@@ -11,4 +11,6 @@ echo "--- add aliasses ---"
 echo "# Add the vagrant .profile file" >> /home/vagrant/.profile
 echo "source /vagrant/.profile" >> /home/vagrant/.profile
 
-
+echo "--- Install vamp drush ---"
+git clone https://github.com/stevenvdhout/Vamp-Drush.git /home/vagrant/drush/vamp
+drush cc drush
